@@ -3,7 +3,7 @@ import JSONPretty from 'react-json-pretty';
 const Profile = () => {
     const { user, isAuthenticated } = useAuth0();
     return (
-        isAuthenticated && (
+        isAuthenticated && user!= undefined && (
             <div>
                 <img src={user.picture} alt={user.name} />
                 <h2>{user.name}</h2>
